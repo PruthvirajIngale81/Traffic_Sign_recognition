@@ -1,6 +1,10 @@
 pandas
 numpy
+opencv-python
+matplotlib
 tensorflow
 keras
-PIL
+pillow
 sklearn
+
+-e .
