@@ -9,7 +9,7 @@ model = load_model('traffic_classifier.h5')
 @app.route('/')
 def hello():
 ## dictionary that define traffic signs rules
-    label = { 1:'Speed limit (20km/h)',
+    classes = { 1:'Speed limit (20km/h)',
             2:'Speed limit (30km/h)',      
             3:'Speed limit (50km/h)',       
             4:'Speed limit (60km/h)',      
