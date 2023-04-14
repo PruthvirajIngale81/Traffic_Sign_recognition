@@ -6,5 +6,5 @@ tensorflow
 keras
 pillow
 sklearn
-
--e .
+flask
+#-e .

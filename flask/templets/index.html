@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Sign Recognition</title>
+</head>
+<body>
+    <h1>Traffic Sign Recognition</h1>
+    <div>
+        <video id="video" width="320" height="240" autoplay></video>
+    </div>
+    <button id="capture">Capture Image</button>
+    <div id="result"></div>
+
+    <script>
+        // Get the video element from the page
+        const video = document.getElementById('video');
+
+        // Get the canvas element from the page
+        const canvas = document.createElement('canvas');
+
+        // Get the context of the canvas element
+        const context = canvas.getContext('2d');
+
+        // Get the button element from the page
+        const captureButton = document.getElementById('capture');
+
+        // Add an event listener to the button to capture an image
+        captureButton.addEventListener('click', () => {
+            // Draw the video frame onto the canvas
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // Convert the canvas to a data URL
+            const dataUrl = canvas.toDataURL();
+
+            // Make a request to the Flask server to get the predicted label
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({image: dataUrl})
+            })
+            .then(response => response.json())
+            .then(data => {
+                const label = data.label;
+                document.getElementById("result").innerHTML = `Predicted label: ${label}`;
+            })
+            .catch(error => console.error(error));
+        });
+
+        // Set up the video stream
+        navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(error => console.error(error));
+    </script>
+</body>
+</html>
