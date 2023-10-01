@@ -1,28 +1,28 @@
-#Project Overview
+# Project Overview
 
 The Traffic Sign Recognition project aims to demonstrate the application of AI and machine learning in recognizing traffic signs from images. The project includes a trained machine learning model and a Flask-based GUI for users to upload images and get real-time predictions for traffic signs.
 
 
-##Installation:
+## Installation:
 
 To get started with the project, follow these steps:
 
-###Clone the repository:
+### Clone the repository:
 ```
 git clone https://github.com/PruthvirajIngale81/-Traffic_Sign_recognition.git
 ```
-###Navigate to the project directory:
+### Navigate to the project directory:
 ```
 cd -Traffic_Sign_recognition
 ```
-###Install the required packages using pip:
+### Install the required packages using pip:
 ```
 pip install -r requirements.txt
 ```
 
-##Usage:
+## Usage:
 
-###Run the Flask application:
+### Run the Flask application:
 ```
 python app.py
 ```
@@ -31,7 +31,7 @@ Upload an image containing a traffic sign and submit it.
 The application will display the recognized traffic sign and its prediction.
 
 
-##File Structure:
+## File Structure:
 
 
 app.py: The Flask application script.
@@ -41,18 +41,18 @@ templates/: Folder containing HTML templates.
 model/: Folder containing the trained machine learning model.
 
 
-##Technologies Used:
+## Technologies Used:
 
 Python: Programming language for the backend.
 Flask: Web framework for creating the GUI.
 HTML and CSS: Structuring and styling the GUI.
 TensorFlow/Keras: Framework for training and using the machine learning model.
 
-##Machine Learning Model:
+## Machine Learning Model:
 
 The project uses a pre-trained machine learning model (traffic_sign_model.h5) to recognize traffic signs from images. This model was trained using a labeled dataset of traffic sign images.
 
-##Flask GUI:
+## Flask GUI:
 
 The Flask-based GUI allows users to:
 
