@@ -9,11 +9,11 @@ To get started with the project, follow these steps:
 
 #### Clone the repository:
 ```
-git clone https://github.com/PruthvirajIngale81/-Traffic_Sign_recognition.git
+git clone https://github.com/PruthvirajIngale81/Traffic_Sign_recognition.git
 ```
 #### Navigate to the project directory:
 ```
-cd -Traffic_Sign_recognition
+cd Traffic_Sign_recognition
 ```
 #### Install the required packages using pip:
 ```
