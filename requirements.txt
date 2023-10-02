@@ -7,4 +7,3 @@ keras
 pillow
 sklearn
 flask
-#-e .
